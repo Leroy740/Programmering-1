@@ -1,1 +1,4 @@
-print("Hejsan")
+from unicodedata import name
+
+
+name = input (Hej, )
