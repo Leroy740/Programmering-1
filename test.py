@@ -1,16 +1,21 @@
+ # Hur ändrar man en variabel
+score = 0
 
+# Lägg till 3 på två olika sätt
+score += 3
+score = score + 3
 
-name = input("Hej, vad heter du? ")
+# Ta bort 5 på två olika sätt
+score -= 5
+score = score - 5
 
-print("Välkommen", name)
+answer1 = input("Vem är Ashs första Pokemon?")
 
-# Använd inte plus, använd format!
-food = input("Hej " + name + " vad gillar du att äta?")
+print("A. Paris\nB. Budapest\nC. London")
+answer2 = input("Vilken är Frankrikes huvudstad?")
 
-# Använd format, mycket bättre!
-# {} skrivs med alt gr + 7
-food = input(f"Hej {name} vad gillar du att äta?")
+print("Vilken är Sveriges huvudstad?")
+answer3 = input().capitalize()
 
-
-print("Hej", name, "du gillar", food, ".")
-print(f"Hej {name} du gillar {food}.")
+if answer3 == "Stockholm":
+    score += 3 
