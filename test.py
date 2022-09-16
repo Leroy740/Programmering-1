@@ -1,21 +1,62 @@
- # Hur ändrar man en variabel
-score = 0
+# Tidigare genomgång: https://www.youtube.com/watch?v=e3LL4mSrLMs&ab_channel=HampusEriksson
 
-# Lägg till 3 på två olika sätt
-score += 3
-score = score + 3
+# Users
+# Skapa dictionary
 
-# Ta bort 5 på två olika sätt
-score -= 5
-score = score - 5
+# Key-value pair
 
-answer1 = input("Vem är Ashs första Pokemon?")
+users = {"alec.andin" : "1234", "eddie.sunden" : "nocap", "adam" : "adam123", "berit" : "berit123", "carl":"carl123"}
 
-print("A. Paris\nB. Budapest\nC. London")
-answer2 = input("Vilken är Frankrikes huvudstad?")
+print(*users)
 
-print("Vilken är Sveriges huvudstad?")
-answer3 = input().capitalize()
+# Lägg till key-value pair
+users["dante.norling"] = "aaahh"
+print(*users)
 
-if answer3 == "Stockholm":
-    score += 3 
+# Ändra value
+users["dante.norling"] = "surprised look"
+
+# Ta bort - del
+del users["dante.norling"]
+
+# Ta bort - pop
+users.pop("alec.andin")
+
+print(*users)
+
+"""
+logged_in = False
+while not logged_in:
+    username = input("Username: ")
+    password = input("Password: ")
+    if users[username] == password:
+        print("Logged in.")
+        logged_in = True
+    else:
+        print("Username or password is incorrect.")
+"""
+
+# .keys()
+for x in users.keys():
+    print(x)
+
+# .values()
+for x in users.values():
+    print(x)
+
+# .items()
+
+# Users
+for x, y in users.items():
+    print(x, y)
+
+# Räkna
+import random
+
+counts = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+
+for _ in range(1000):
+    slump = random.randint(1,6)
+    counts[slump] += 1
+
+print(counts)
