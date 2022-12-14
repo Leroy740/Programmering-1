@@ -3,13 +3,15 @@ def printboard(board):
     for row in board:
         print(*row)
 
-        print()
+    print()
 
-rows = 3
-cols = 8
+rows = 4
+cols = 6
 board =[["-" for _ in range(cols)]for _ in range(rows)]
 printboard(board)
 
-board[2][2] = "X"
+
+
+board[row][col]  = "X"
 
 printboard(board) 
